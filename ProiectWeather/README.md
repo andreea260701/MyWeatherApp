@@ -1,6 +1,6 @@
 # PyWeatherApp
 
-PyWeatherApp este o aplicație simplă Python care permite utilizatorilor să obțină prognoza meteo folosind OpenWeatherMap API.
+PyWeatherApp este o aplicație Python care permite utilizatorilor să obțină prognoza meteo pentru un oraș specificat, folosind API-ul OpenWeatherMap.
 
 ## Funcționalități
 - Obține prognoza meteo pentru orice oraș din lume
@@ -9,29 +9,32 @@ PyWeatherApp este o aplicație simplă Python care permite utilizatorilor să ob
 
 ## Cerințe
 - Python 3.x
-- requests library
+- requests library (instalată automat din `requirements.txt`)
+- Cheie API de la [OpenWeatherMap](https://openweathermap.org/api)
 
-## Instalare
+## Utilizare
 
-1. Clonează acest repository:
+Pentru a rula aplicația:
+
+1. Rulează scriptul `run.py`:
     ```bash
-    git clone https://github.com/username/PyWeatherApp.git
-    cd PyWeatherApp
+    python run.py
     ```
 
-2. Instalează dependențele:
-    ```bash
-    pip install -r requirements.txt
-    ```
+2. După ce rulezi aplicația, ți se va cere să introduci numele unui oraș urmat de codul țării.
 
-3. Obține o cheie API de la [OpenWeatherMap](https://openweathermap.org/api) și adaug-o în `pyweatherapp/config.py`.
+    - **Format**: `oras,tara` 
+    - Exemplu: 
+      - Pentru București, România: `Bucharest,RO`
+      - Pentru Londra, Marea Britanie: `London,GB`
+      - Pentru Paris, Franța: `Paris,FR`
 
-4. Rularea aplicației:
-    ```bash
-    python -m pyweatherapp.weather city_name
-    ```
+    **Important**: Codul țării trebuie să fie specificat în format ISO 3166-1 alpha-2 (de exemplu, pentru România folosește `RO`, pentru Franța folosește `FR`, etc.).
 
-## Rulare Teste
-Pentru a rula testele:
+3. Aplicația va returna temperatura și o descriere a vremii pentru orașul selectat.
+
+## Exemplu
+
+Dacă vrei să obții prognoza pentru București, România, introdu:
 ```bash
-python -m unittest discover tests
+Introduceți numele orașului (oraș, țară): Bucharest,RO
