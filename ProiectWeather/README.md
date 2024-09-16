@@ -1,40 +1,40 @@
 # PyWeatherApp
 
-PyWeatherApp este o aplicație Python care permite utilizatorilor să obțină prognoza meteo pentru un oraș specificat, folosind API-ul OpenWeatherMap.
+PyWeatherApp is a Python application that allows users to get the weather forecast for a specified city using the OpenWeatherMap API.
 
-## Funcționalități
-- Obține prognoza meteo pentru orice oraș din lume
-- Afișează temperatura în grade Celsius
-- Oferă descrierea vremii
+## Features
+- Get the weather forecast for any city in the world
+- Displays temperature in Celsius
+- Provides a weather description
 
-## Cerințe
+## Requirements
 - Python 3.x
-- requests library (instalată automat din `requirements.txt`)
-- Cheie API de la [OpenWeatherMap](https://openweathermap.org/api)
+- `requests` library (automatically installed via `requirements.txt`)
+- API key from [OpenWeatherMap](https://openweathermap.org/api)
 
-## Utilizare
+## Usage
 
-Pentru a rula aplicația:
+To run the application:
 
-1. Rulează scriptul `run.py`:
+1. Run the `run.py` script:
     ```bash
     python run.py
     ```
 
-2. După ce rulezi aplicația, ți se va cere să introduci numele unui oraș urmat de codul țării.
+2. After running the app, you will be prompted to enter a city name followed by the country code.
 
-    - **Format**: `oras,tara` 
-    - Exemplu: 
-      - Pentru București, România: `Bucharest,RO`
-      - Pentru Londra, Marea Britanie: `London,GB`
-      - Pentru Paris, Franța: `Paris,FR`
+    - **Format**: `city,country`
+    - Example: 
+      - For Bucharest, Romania: `Bucharest,RO`
+      - For London, United Kingdom: `London,GB`
+      - For Paris, France: `Paris,FR`
 
-    **Important**: Codul țării trebuie să fie specificat în format ISO 3166-1 alpha-2 (de exemplu, pentru România folosește `RO`, pentru Franța folosește `FR`, etc.).
+    **Important**: The country code must be specified in ISO 3166-1 alpha-2 format (e.g., for Romania use `RO`, for France use `FR`, etc.).
 
-3. Aplicația va returna temperatura și o descriere a vremii pentru orașul selectat.
+3. The app will return the temperature and a weather description for the selected city.
 
-## Exemplu
+## Example
 
-Dacă vrei să obții prognoza pentru București, România, introdu:
+If you want to get the forecast for Bucharest, Romania, enter:
 ```bash
-Introduceți numele orașului (oraș, țară): Bucharest,RO
+Enter city name (city, country): Bucharest,RO
